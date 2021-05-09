@@ -1,3 +1,5 @@
+-- Simple recursive solution
+
 collatz :: Int -> [Int]
 collatz 1 = [1]
 collatz n
