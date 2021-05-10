@@ -5,7 +5,11 @@ josephus n = runner [1 .. n]
     runner [y] = []
     runner (x : y : z) = (x, y) : runner (z ++ [x])
 
+-- Read the last value of Josephus Winner
+josephusWinner :: Int -> Int 
+josephusWinner = fst . last . josephus
+
 -- Direct formula application for final safe position
 -- [https://en.wikipedia.org/wiki/Josephus_problem#Solution]
-josephusWinner :: Int -> Int
-josephusWinner n = 2 * (n - 2 ^ (floor . logBase 2 . fromIntegral) n) + 1
+josephusWinnerFast :: Int -> Int
+josephusWinnerFast n = 2 * (n - 2 ^ (floor . logBase 2 . fromIntegral) n) + 1
