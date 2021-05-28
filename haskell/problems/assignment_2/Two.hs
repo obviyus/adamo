@@ -1,3 +1,4 @@
+module Two where
 import Data.Ratio (denominator, numerator, (%))
 
 -- Converts a non-empty list of Integers to it's fractional representation
